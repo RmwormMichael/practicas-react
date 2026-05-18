@@ -1,0 +1,34 @@
+{
+  "notas": [
+    {
+      "id": "1",
+      "text": "Aprender react",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "text": "Hacer ejercicio",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "text": "Leer un libro",
+      "completed": false
+    },
+    {
+      "id": "c387",
+      "text": "Hola",
+      "completed": true
+    },
+    {
+      "id": "0cea",
+      "text": "Hola",
+      "completed": true
+    },
+    {
+      "id": "db32",
+      "text": "ya edite",
+      "completed": false
+    }
+  ]
+}
