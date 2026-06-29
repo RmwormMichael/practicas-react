@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 
 const TodoForm = ({onAgregarUsuario}) => {
-  const [newName, setNewName] = useState("")
-  const [newEmail, setNewEmail] = useState("")
+  const [newUser, setNewUser]=useState("")
+  const [newEmail, setNewEmail]=useState("")
 
-  const handleSubmit = async(e)=>{
-    e.preventDefault()
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
 
-    const newUser ={
-      name:newName,
+    const nuevoUsuario={
+      name:newUser,
       email:newEmail
     }
 
-    const response = await fetch("http://localhost:3000/api/users",{
-      method:"POST",
+    const response=await fetch("http://localhost:3000/api/users",{
+      method:'POST',
       headers:{
         "content-type":"application/json"
       },
-      body:JSON.stringify(newUser)
+      body:JSON.stringify(nuevoUsuario)
     })
-    const data = await response.json()
+    const data=await response.json()
     onAgregarUsuario(data)
-    setNewName("")
+    setNewUser("")
     setNewEmail("")
   }
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e)=>setNewName(e.target.value)} value={newName}/>
+        <input type="text" onChange={(e)=>setNewUser(e.target.value)} value={newUser}/>
         <input type="text" onChange={(e)=>setNewEmail(e.target.value)} value={newEmail}/>
-        <button type="submit">agregar</button>
+        <button type="submit">Agregar</button>
       </form>
     </>
   );
